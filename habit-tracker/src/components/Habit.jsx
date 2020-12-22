@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
 
 class Habit extends PureComponent {
-
-  componentDidMount(){ //component가 ui상에 등록 되어질 때 호출
+  //component가 ui상에 등록 되어질 때 호출
+  // 사용자에게 보여질 때
+  componentDidMount(){ 
     console.log(`habit: ${this.props.habit.name} mounted`);
   }
-  componentWillUnmount(){ //component가 ui상에 지우기 전 호출
+  //component가 ui상에 지우기 전 호출
+  componentWillUnmount(){ 
     console.log(`habit: ${this.props.habit.name} will unmounted`);
 
   }

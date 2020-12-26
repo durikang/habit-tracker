@@ -1,16 +1,18 @@
 import React, { useRef } from 'react';
 import styles from './search_header.module.css'
 
-const Search_header = () => {
+const Search_header = ({ onSearch }) => {
     const inputRef =useRef();
     const handleSearch =() =>{
         const value = inputRef.current.value;
         console.log(value);
-        //onSearch(value);
+        onSearch(value);
     }
+    
     const onClick = ()=>{
         handleSearch();
     }
+
     const onKeyPress=(event)=>{
         if(event.key ==='Enter'){
             handleSearch();

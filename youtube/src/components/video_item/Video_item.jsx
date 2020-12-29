@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './video_item.module.css'
 //만약 넘겨오는 파라미터의 이름을 정의하고 싶을 때
 // props대신 props다음 파라미터로 넘겨오는 인자 이름
@@ -7,8 +7,14 @@ import styles from './video_item.module.css'
 // 혹은 {video : videoItem } => ( ..etc ..)
 
 
-const Video_item = ({video: { snippet}}) => (
-    <li className={styles.container}>
+const Video_item = memo(({video, video: { snippet }, onVideoClick, display }) => {
+    
+    
+    const displayType = display === 'list' ? styles.list : styles.grid;
+    
+    
+    return(
+    <li className={`${styles.container} ${displayType}`} onClick={()=> onVideoClick(video)}>
         <div className={styles.video}>
             <img  className={styles.thumbnail}src={snippet.thumbnails.medium.url} alt = "video thumbnail"/>
             <div className={styles.metadata}>
@@ -17,6 +23,6 @@ const Video_item = ({video: { snippet}}) => (
             </div>
         </div>
     </li>
-);
+)});
 
 export default Video_item;

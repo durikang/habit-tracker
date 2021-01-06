@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import Footer from '../footer/Footer';
-import Header from '../header/Header';
-import styles from './Login.module.css';
+import Footer from '../footer/footer';
+import Header from '../header/header';
+import styles from './login.module.css';
 
 const Login = ({ authService }) => {
   const history = useHistory();
@@ -27,7 +27,7 @@ const Login = ({ authService }) => {
 
   return (
     <section className={styles.login}>
-      <Header/>
+      <Header />
       <section>
         <h1>Login</h1>
         <ul className={styles.list}>

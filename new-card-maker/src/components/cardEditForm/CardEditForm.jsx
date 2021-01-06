@@ -14,7 +14,7 @@ const CardEditForm = ({card}) => {
         fileURL
         } = card;
     const onsubmit=()=>{
-
+        
     }
     return (
         <form className={styles.form}>

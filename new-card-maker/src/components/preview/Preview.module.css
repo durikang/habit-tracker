@@ -1,7 +1,9 @@
+@value makerGreen from '../../common/colors.css';
+
 .preview {
   flex-basis: 50%;
-  background-color: skyblue;
 }
+
 .title {
   width: 100%;
   text-align: center;

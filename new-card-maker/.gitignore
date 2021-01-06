@@ -8,11 +8,11 @@
 # testing
 /coverage
 
+# API Keys
+.env
+
 # production
 /build
-
-# API KEYs
-.env
 
 # misc
 .DS_Store
